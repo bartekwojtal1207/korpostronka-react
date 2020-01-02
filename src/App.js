@@ -7,16 +7,14 @@ import Homepage from "./containers/homepage/Homepage";
 
 
 const App = () => {
-  return (
-    <div className={styles.App}>
+    return (
         <Layout>
             layouyt
             <Homepage>
                 strona glowna
             </Homepage>
         </Layout>
-    </div>
-  );
+    );
 };
 
 export default App;

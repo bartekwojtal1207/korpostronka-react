@@ -3,7 +3,7 @@ import styles from './Logo.module.scss';
 
 const Logo = () => {
     return (
-        <a href="https://www.totalmoney.pl" title="www.totalmoney.pl" className={styles.Logo}>
+        <a href="https://firma.totalmoney.pl/" title="Strona główna" className={styles.Logo}>
             total<strong>money.</strong>pl
         </a>
     )

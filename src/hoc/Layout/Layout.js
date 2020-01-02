@@ -7,12 +7,12 @@ class Layout extends Component {
 
     render() {
         return (
-            <div>
+         <div>
                 <Navbar stylesApp={stlyes}/>
-                <div className={stlyes.Container}>
-                    {this.props.children}
-                </div>
-            </div>
+                {/*<div className={stlyes.Container}>*/}
+                {/*    {this.props.children}*/}
+                {/*</div>*/}
+         </div>
         );
     }
 }
