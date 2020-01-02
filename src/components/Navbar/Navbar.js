@@ -10,9 +10,7 @@ const Navbar = (props) => {
         <nav className={styles.Nav}>
             <div className={props.stylesApp.Container}>
                 <Logo/>
-
                 <BurgerMenu/>
-
             </div>
         </nav>
     )
