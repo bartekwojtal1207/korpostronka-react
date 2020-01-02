@@ -7,8 +7,11 @@ class Layout extends Component {
 
     render() {
         return (
-         <div  className={styles.HeaderImg} style={{ 'backgroundImage': 'linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("' + Logo + '")'}}>
-                <Navbar stylesApp={styles}/>
+         <div>
+             <div className={styles.HeaderImg} style={{ 'backgroundImage': 'linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("' + Logo + '")'}} >
+                 <Navbar stylesApp={styles} />
+             </div>
+
                 {/*<div className={stlyes.Container}>*/}
                 {/*    {this.props.children}*/}
                 {/*</div>*/}
