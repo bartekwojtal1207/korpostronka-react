@@ -1,0 +1,48 @@
+.ButtonLink {
+  width: 218px;
+  height: 48px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.286;
+  border-radius: 25px;
+  text-transform: uppercase;
+  z-index: 1;
+  box-shadow: none;
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: white;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  text-decoration: none;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #FFF;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    transition-property: transform;
+    transition-duration: .6s;
+    transition-timing-function: ease-out;
+    z-index: -1;
+  }
+
+  &:hover {
+    border: 1px solid #fff;
+    background-color: #fff;
+    color: #666;
+    cursor: pointer;
+
+    &:before {
+      transform: scaleX(1);
+      transition-timing-function: cubic-bezier(0.45, 1.64, 0.47, 0.66);
+    }
+  }
+}
