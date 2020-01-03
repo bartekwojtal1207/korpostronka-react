@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import stylesApp from '../../App.module.scss';
 import WhatWeDo from "../../components/WhatWeDo/WhatWeDo";
+import Numbers from "../../components/Numbers/Numbers";
 
 class Homepage extends Component {
 
@@ -8,6 +8,7 @@ class Homepage extends Component {
         return (
             <div>
                 <WhatWeDo/>
+                <Numbers/>
             </div>
         )
     }
