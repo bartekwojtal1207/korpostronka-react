@@ -9,14 +9,15 @@ class Layout extends Component {
     render() {
         return (
          <div>
-             <div className={styles.HeaderImg} style={{ 'backgroundImage': 'linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("' + Logo + '")'}} >
-                 <Navbar stylesApp={styles} />
-                <Header stylesApp={styles}/>
+             <div className={styles.HeaderImg}
+                  style={{'backgroundImage': 'linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("' + Logo + '")'}}>
+                 <Navbar stylesApp={styles}/>
+                 <Header stylesApp={styles}/>
              </div>
 
-                {/*<div className={stlyes.Container}>*/}
-                {/*    {this.props.children}*/}
-                {/*</div>*/}
+                <div>
+                    {this.props.children}
+                </div>
          </div>
         );
     }

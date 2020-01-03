@@ -9,10 +9,7 @@ import Homepage from "./containers/homepage/Homepage";
 const App = () => {
     return (
         <Layout>
-            layouyt
-            <Homepage>
-                strona glowna
-            </Homepage>
+            <Homepage/>
         </Layout>
     );
 };
