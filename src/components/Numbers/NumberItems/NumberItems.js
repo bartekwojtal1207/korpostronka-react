@@ -49,7 +49,10 @@ class NumberItems extends Component {
         const items = this.state.boxes.map((el, key) => {
             return (
                 <div key={key}>
-                    <span>{el.currentValue.toFixed(1).toString().replace(".", ",")}</span>
+                    <span>{ el.currentValue.toString().replace(".", ",")  % 1 === 0 ?
+                        el.currentValue.toString().replace(".", ",") :
+                        el.currentValue.toFixed(1).toString().replace(".", ",")
+                    }</span>
                     <p>{el.title}</p>
                 </div>
             )
