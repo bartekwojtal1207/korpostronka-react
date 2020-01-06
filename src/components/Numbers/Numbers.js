@@ -3,7 +3,6 @@ import Styles from './Numbers.module.scss';
 import Logo from './numbers.jpg'
 import StylesApp from '../../hoc/Layout/Layout.module.scss'
 import SectionTitle from "../UI/Titles/SectionTitle";
-import ButtonLink from "../UI/Buttons/ButtonLink";
 import NumberItems from "./NumberItems/NumberItems";
 
 const Numbers = () => {
