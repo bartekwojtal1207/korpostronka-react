@@ -1,0 +1,16 @@
+{
+  "teams": [
+    {
+      "title": "analitycy",
+      "description": "Piszą, sprawdzają, analizują. Wiedzą, co w banku piszczy. Można ich zapytać nie tylko o najlepsze konto (wiedzą), hipotekę (znają) czy lokatę (policzą). A po pracy pieką torty, fotografują, podróżują, biegają albo oglądają wyścigi samochodowe."
+    },
+    {
+      "title": "wsparcie sprzedaży",
+      "description": "Znają się na cyfrach, kampaniach, motorach i piłce nożnej. Polskie Tatry nie mają przed nimi tajemnic. Zawsze znajdą odpowiednie argumenty - czasem za, a czasem przeciw. Mają najładniejszy widok z okna!"
+    },
+    {
+      "title": "afiliacja",
+      "description": "Pokazują, jak zarabiać w internecie. Lubią otaczać się zabawnymi cytatami. Radzą sobie z najtrudniejszymi problemami. Szybko i sprawnie gaszą pożary i rozwiązują nawet te najbardziej nierozwiązywalne kłopoty wydawców."
+    }
+  ]
+}

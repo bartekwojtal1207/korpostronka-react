@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import WhatWeDo from "../../components/WhatWeDo/WhatWeDo";
 import Numbers from "../../components/Numbers/Numbers";
+import Teams from "../../components/Teams/Teams";
 
 class Homepage extends Component {
 
@@ -9,6 +10,7 @@ class Homepage extends Component {
             <div>
                 <WhatWeDo/>
                 <Numbers/>
+                <Teams/>
             </div>
         )
     }
