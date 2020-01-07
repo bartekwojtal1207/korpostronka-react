@@ -6,6 +6,7 @@ import Slider from "react-slick";
 import data from './teams.json';
 import TeamsItems from "./TeamsItems";
 
+
 class Teams extends Component {
     constructor(props) {
         super(props);
@@ -21,6 +22,7 @@ class Teams extends Component {
             }
         }
     }
+
     render() {
         const {teams, sliderSettings} = this.state;
         const sliderItem = Object.keys(teams).map((value, index) => <TeamsItems key={index} title={teams[value].title} description={teams[value].description} />);

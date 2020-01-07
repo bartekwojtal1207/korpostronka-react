@@ -11,6 +11,30 @@
     {
       "title": "afiliacja",
       "description": "Pokazują, jak zarabiać w internecie. Lubią otaczać się zabawnymi cytatami. Radzą sobie z najtrudniejszymi problemami. Szybko i sprawnie gaszą pożary i rozwiązują nawet te najbardziej nierozwiązywalne kłopoty wydawców."
+    },
+    {
+      "title": "handlowcy",
+      "description": "Nawiązują relacje, zapraszają do współpracy, przygotowują oferty, pilnują kampanii. Dbają o obecnych i przyszłych reklamodawców. Potrafią uszyć kampanię na miarę i ulepić rekordowo wielki zamek z piasku. Nigdy nie śpią:)"
+    },
+    {
+      "title": "marketing i komunikacja",
+      "description": "Opisują skomplikowaną, finansową rzeczywistość i… rysują Monstery. Projektują, promują, tworzą. Pilnują, żeby było spójnie, zrozumiale i czytelnie, a logotyp zawsze miał odpowiednie rozmiary. I żeby w biurze było kolorowo."
+    },
+    {
+      "title": "digital Acquisition",
+      "description" : "Social media ninja. Znają wszystkie fanpage, trochę lubią mięso, a trochę wolą warzywa. W sumie mają pewnie z kilka tysięcy płyt winylowych i jeszcze więcej woblerów. Łowią grube sumy - nie tylko w internecie."
+    },
+    {
+      "title": "rozwój technologii",
+      "description": "Sprawiają, że “u nas działa”. Pozjadali wszystkie języki (programowania). Śmieją się z żartów o programistach i nie siedzą w piwnicy! Po godzinach trenują, czytają, patrzą w gwiazdy albo tańczą salsę."
+    },
+    {
+      "title": "projekty e-commerce",
+      "description": "Wymyślają, optymalizują, testują, koordynują i wdrażają nasze projekty. Dbają o wygląd i działanie serwisów. Działają szybko i sprawnie - pewnie dlatego zawsze wygrywają w piłkarzyki i w wyścigach gokartów."
+    },
+    {
+      "title": "hr i back office",
+      "description": "Rekrutują, wypłacają pensje, przygotowują umowy, odpowiadają na trudne pytania, znają kodeksy i nie boją się ich używać, obsługują biuro i czuwają nad właściwą częstotliwością imprez integracyjnych."
     }
   ]
 }
