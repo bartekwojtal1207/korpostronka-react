@@ -5,7 +5,15 @@ import SectionTitle from "../UI/Titles/SectionTitle";
 import Slider from "react-slick";
 import data from './teams.json';
 import TeamsItems from "./TeamsItems";
-
+import {Afiliacja,
+    Analitycy,
+    Handlowcy,
+    DigitalAcquisition,
+    HrIBackOffice,
+    Marketing,
+    ProjektyeCommerce,
+    RozwojTechnologii,
+    WsparcieSprzedazy } from "./icons/icons";
 
 class Teams extends Component {
     constructor(props) {
@@ -19,13 +27,46 @@ class Teams extends Component {
                 speed: 500,
                 slidesToShow: 1,
                 slidesToScroll: 1
-            }
+            },
+            activeSlide: 'afiliacja'
         }
     }
 
+    getIcon() {
+        let name = this.state.activeSlide;
+
+        switch (name) {
+            case 'afiliacja':
+                return <Afiliacja/>;
+            case 'analitycy':
+                return <Analitycy/>;
+            case 'digitalacquisition':
+                return <DigitalAcquisition/>;
+            case 'handlowcy':
+                return <Handlowcy/>;
+            case 'hribackoffice':
+                return <HrIBackOffice/>;
+            case 'marketing':
+                return <Marketing/>;
+            case 'projektyeCommerce':
+                return <ProjektyeCommerce/>;
+            case 'rozwojTechnologii':
+                return <RozwojTechnologii/>;
+            case 'wsparcieSprzedazy':
+                return <WsparcieSprzedazy/>;
+            default:
+                return <Afiliacja/>
+        }
+    }
+
+    test2(name) {
+        this.setState({activeSlide: name})
+    }
+
     render() {
-        const {teams, sliderSettings} = this.state;
-        const sliderItem = Object.keys(teams).map((value, index) => <TeamsItems key={index} title={teams[value].title} description={teams[value].description} />);
+        const {teams, sliderSettings, activeSlide} = this.state;
+        const icon = this.getIcon();
+        const sliderItem = Object.keys(teams).map((value, index) => <TeamsItems icon={icon} key={index} title={teams[value].title} description={teams[value].description} />);
 
         return (
             <section className={Styles.TeamsSection}>
