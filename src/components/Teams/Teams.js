@@ -28,19 +28,9 @@ class Teams extends Component {
                 speed: 500,
                 slidesToShow: 1,
                 slidesToScroll: 1,
-                // beforeChange: (currentSlide) => this.changeSlide(currentSlide),
                 lazyLoad: 'progressive'
-            },
-            activeSlide: 0
+            }
         }
-    }
-
-    changeSlide(currentSlide) {
-        const slides = document.querySelectorAll('.slick-slide');
-        const arraySlides = [...slides];
-        // console.log(currentSlide)
-        // console.log(arraySlides[currentSlide + 1])
-        this.setState({activeSlide: (currentSlide + 1)})
     }
 
     getIcon(currentSlide) {
@@ -70,11 +60,10 @@ class Teams extends Component {
     }
 
     render() {
-        console.log('render')
-        const {teams, sliderSettings, activeSlide} = this.state;
+        const {teams, sliderSettings} = this.state;
 
         const sliderItem = Object.keys(teams).map((value, index) =>
-            <TeamsItems icon={ index === activeSlide ?  this.getIcon(activeSlide) : null}
+            <TeamsItems icon={ this.getIcon(index)}
                         key={index}
                         name={teams[value].title}
                         title={teams[value].title}
