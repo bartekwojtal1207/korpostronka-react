@@ -58,7 +58,8 @@
 }
 
 .slick-dots li {
-    background-color: transparent;
+
+    background-color: rgb(77, 157, 232);
     width: 100%;
     border: 1px solid lightgray;
     margin-right: 5px;
@@ -72,6 +73,9 @@
     background-color: rgb(77, 157, 232);
 }
 
+.slick-dots .slick-active ~ li {
+    background-color: transparent;
+}
 
 .slick-dots button {
     background-color: transparent;

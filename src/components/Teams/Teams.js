@@ -27,51 +27,58 @@ class Teams extends Component {
                 infinite: false,
                 speed: 500,
                 slidesToShow: 1,
-                slidesToScroll: 1
+                slidesToScroll: 1,
+                // beforeChange: (currentSlide) => this.changeSlide(currentSlide),
+                lazyLoad: 'progressive'
             },
-            activeSlide: 'analitycy'
+            activeSlide: 0
         }
     }
 
-    getIcon() {
-        let name = this.state.activeSlide;
+    changeSlide(currentSlide) {
+        const slides = document.querySelectorAll('.slick-slide');
+        const arraySlides = [...slides];
+        // console.log(currentSlide)
+        // console.log(arraySlides[currentSlide + 1])
+        this.setState({activeSlide: (currentSlide + 1)})
+    }
 
-        switch (name) {
-            case 'afiliacja':
-                return <Afiliacja/>;
-            case 'analitycy':
+    getIcon(currentSlide) {
+
+        switch (currentSlide) {
+            case 0:
                 return <Analitycy/>;
-            case 'digitalacquisition':
-                return <DigitalAcquisition/>;
-            case 'handlowcy':
-                return <Handlowcy/>;
-            case 'hribackoffice':
-                return <HrIBackOffice/>;
-            case 'marketing':
-                return <Marketing/>;
-            case 'projektyeCommerce':
-                return <ProjektyeCommerce/>;
-            case 'rozwojTechnologii':
-                return <RozwojTechnologii/>;
-            case 'wsparcieSprzedazy':
+            case 1:
                 return <WsparcieSprzedazy/>;
+            case 2:
+                return <Afiliacja/>;
+            case 3:
+                return <Handlowcy/>;
+            case 4:
+                return <Marketing/>;
+            case 5:
+                return <DigitalAcquisition/>;
+            case 6:
+                return <RozwojTechnologii/>;
+            case 7:
+                return <ProjektyeCommerce/>;
+            case 8:
+                return <HrIBackOffice/>;
             default:
-                return <Afiliacja/>
+                return <Analitycy/>
         }
     }
 
     render() {
+        console.log('render')
         const {teams, sliderSettings, activeSlide} = this.state;
-        const icon = this.getIcon();
-        const test= icon.type.name == activeSlide ? icon : null
 
-
-        console.log(icon.type.name)
-        console.log(activeSlide)
-        if (icon.type.name == activeSlide) {
-            console.log('www')
-        }
-        const sliderItem = Object.keys(teams).map((value, index) => <TeamsItems icon={activeSlide == teams[value].title ? icon : null}  key={index} title={teams[value].title} description={teams[value].description} />);
+        const sliderItem = Object.keys(teams).map((value, index) =>
+            <TeamsItems icon={ index === activeSlide ?  this.getIcon(activeSlide) : null}
+                        key={index}
+                        name={teams[value].title}
+                        title={teams[value].title}
+                        description={teams[value].description} />);
 
         return (
             <section className={Styles.TeamsSection}>
