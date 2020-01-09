@@ -1,11 +1,12 @@
-import React, { Component} from 'react';
+import React from 'react';
+import Style from './Teams.module.scss';
 
 const TeamsItems = (props) => {
     return (
-        <div key={props.key}>
+        <div key={props.key} className={Style.TeamsItem}>
             {props.icon}
-            <p>{props.title}</p>
-            <span>{props.description}</span>
+            <p className={Style.TeamsItemTitle}>{props.title}</p>
+            <p className={Style.TeamsItemDescription}>{props.description}</p>
         </div>
     )
 };

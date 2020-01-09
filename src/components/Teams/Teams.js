@@ -3,6 +3,7 @@ import StylesApp from '../../hoc/Layout/Layout.module.scss';
 import Styles from './Teams.module.scss';
 import SectionTitle from "../UI/Titles/SectionTitle";
 import Slider from "react-slick";
+import './slider.css';
 import data from './teams.json';
 import TeamsItems from "./TeamsItems";
 import {Afiliacja,
@@ -13,7 +14,7 @@ import {Afiliacja,
     Marketing,
     ProjektyeCommerce,
     RozwojTechnologii,
-    WsparcieSprzedazy } from "./icons/icons";
+    WsparcieSprzedazy} from "./icons/icons";
 
 class Teams extends Component {
     constructor(props) {
@@ -28,7 +29,7 @@ class Teams extends Component {
                 slidesToShow: 1,
                 slidesToScroll: 1
             },
-            activeSlide: 'afiliacja'
+            activeSlide: 'analitycy'
         }
     }
 
@@ -59,14 +60,18 @@ class Teams extends Component {
         }
     }
 
-    test2(name) {
-        this.setState({activeSlide: name})
-    }
-
     render() {
         const {teams, sliderSettings, activeSlide} = this.state;
         const icon = this.getIcon();
-        const sliderItem = Object.keys(teams).map((value, index) => <TeamsItems icon={icon} key={index} title={teams[value].title} description={teams[value].description} />);
+        const test= icon.type.name == activeSlide ? icon : null
+
+
+        console.log(icon.type.name)
+        console.log(activeSlide)
+        if (icon.type.name == activeSlide) {
+            console.log('www')
+        }
+        const sliderItem = Object.keys(teams).map((value, index) => <TeamsItems icon={activeSlide == teams[value].title ? icon : null}  key={index} title={teams[value].title} description={teams[value].description} />);
 
         return (
             <section className={Styles.TeamsSection}>
