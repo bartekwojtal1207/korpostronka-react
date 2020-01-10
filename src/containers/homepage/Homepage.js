@@ -3,6 +3,7 @@ import WhatWeDo from "../../components/WhatWeDo/WhatWeDo";
 import Numbers from "../../components/Numbers/Numbers";
 import Teams from "../../components/Teams/Teams";
 import JobsOffers from "../../components/JobsOffers/JobsOffers";
+import SendCv from "../../components/SendCv/SendCv";
 
 class Homepage extends Component {
 
@@ -13,6 +14,7 @@ class Homepage extends Component {
                 <Numbers/>
                 <Teams/>
                 <JobsOffers/>
+                <SendCv/>
             </div>
         )
     }

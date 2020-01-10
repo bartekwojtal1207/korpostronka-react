@@ -1,0 +1,20 @@
+.SendCV {
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  display: block;
+  padding: 56px 0 30px 0;
+
+  p {
+    color: #FFF;
+    text-align: center;
+    letter-spacing: 1px;
+    font-weight: 400;
+    position: relative;
+    font-size: 14px;
+    line-height: 2.143;
+    padding: 0 20px;
+    font-family: 'Poppins', sans-serif;
+  }
+}
