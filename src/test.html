@@ -1,0 +1,47 @@
+{% set criticalFilesList = list_files(cssDirectory ~ '/critical', 'css') %}
+{% set filesList = list_files(cssDirectory , 'css') %}
+
+{# Load inline critical CSS files#}
+
+{% for file in criticalFilesList %}
+{% if 'width' not in file %}
+<style>{{ source('@public/' ~ cssDirectory  ~ '/critical/' ~ file) }}</style>
+{% endif %}
+{% endfor %}
+
+{# Load inline critical CSS media query files#}
+{% for file in criticalFilesList %}
+{% if 'min-width' in file %}
+<style media="screen and (min-width: {{ file|preg_replace('/[^0-9+]/', '') }}px)">
+    {{ source('@public/' ~ cssDirectory  ~ '/critical/' ~ file) }}
+</style>
+{% endif %}
+{% endfor %}
+
+{# Link non-critical CSS files #}
+{% for file in filesList %}
+{% if 'width' not in file %}
+<link rel="preload" href="{{ asset(cssDirectory ~ file) }}" as="style"
+      onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="{{ asset(cssDirectory ~ file) }}">
+</noscript>
+{% endif %}
+{% endfor %}
+
+{# Link non-critical CSS media query files #}
+{% for file in filesList %}
+{% if 'min-width' in file %}
+<link rel="preload" href="{{ asset(cssDirectory ~ file) }}" as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+      media="screen and (min-width: {{ file|preg_replace('/[^0-9+]/', '') }}px)">
+<noscript>
+    <link rel="stylesheet" href="{{ asset(cssDirectory ~ file) }}">
+</noscript>
+{% endif %}
+{% endfor %}
+
+<script>
+    {# A JavaScript polyfill for loading CSS asynchronously #}
+    {{ source('@public/assets/js/cssrelpreload.min.js') }}
+</script>
