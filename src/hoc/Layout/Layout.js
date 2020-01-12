@@ -14,10 +14,9 @@ class Layout extends Component {
                  <Navbar stylesApp={styles}/>
                  <Header stylesApp={styles}/>
              </div>
-
-                <div>
-                    {this.props.children}
-                </div>
+             <div>
+                 {this.props.children}
+             </div>
          </div>
         );
     }
